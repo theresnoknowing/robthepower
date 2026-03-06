@@ -734,7 +734,7 @@
     <footer>
       <!-- Uses same Imgur URL as the artist icon above — update in JS below -->
       <img class="footer-icon" id="footerIcon" src="#" alt="Rob Power" />
-      <p>© 2025 Rob Power &nbsp;·&nbsp; All rights reserved</p>
+      <p>© <span id="year"></span> Rob Power &nbsp;·&nbsp; All rights reserved</p>
     </footer>
 
   </div>
@@ -789,6 +789,10 @@
       img.addEventListener('load',  () => ph.style.display = 'none');
       img.addEventListener('error', () => ph.style.display = 'flex');
     });
+  </script>
+
+  <script>
+  document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 
 </body>
