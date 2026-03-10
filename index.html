@@ -232,7 +232,7 @@
       flex-direction: column;
       align-items: center;
       gap: 6px;
-      animation: fadeUp 1s 0.9s ease both;
+      animation: fadeUpCentered 1s 0.9s ease both;
     }
     .scroll-cue span {
       font-family: 'Space Mono', monospace;
@@ -250,6 +250,11 @@
     @keyframes scrollPulse {
       0%, 100% { opacity: 0.3; transform: scaleY(1); }
       50%       { opacity: 1;   transform: scaleY(1.1); }
+    }
+
+    @keyframes fadeUpCentered {
+    from { opacity: 0; transform: translateX(-50%) translateY(24px); }
+    to   { opacity: 1; transform: translateX(-50%) translateY(0); }
     }
 
     /* ─── Main content ─────────────────────────────────────────── */
