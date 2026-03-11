@@ -438,6 +438,44 @@
     }
     .listen-btn svg { width: 16px; height: 16px; }
 
+    .listen-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.listen-buttons .listen-btn {
+  margin-top: 0;
+  flex: 1 1 auto;
+}
+
+.listen-btn.sc-btn {
+  background: #ff5500;
+  color: #fff;
+}
+.listen-btn.sc-btn:hover {
+  box-shadow: 0 8px 24px rgba(255, 85, 0, 0.4);
+}
+
+.listen-btn.apple-btn {
+  background: linear-gradient(135deg, #fc3c44, #f94c57);
+  color: #fff;
+}
+.listen-btn.apple-btn:hover {
+  box-shadow: 0 8px 24px rgba(252, 60, 68, 0.4);
+}
+
+@media (max-width: 480px) {
+  .listen-buttons {
+    flex-direction: column;
+  }
+  .listen-buttons .listen-btn {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
     /* ─── Footer ───────────────────────────────────────────────── */
     footer {
       text-align: center;
@@ -581,10 +619,24 @@
               </ul>
             </div>
           </div>
-          <a class="listen-btn" href="https://open.spotify.com/album/4ansrx3QKESzC05xHed808?si=qMu5vYxfS1uW0Ose5MVGFw" target="_blank" rel="noopener">
-            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
-            Listen on Spotify
-          </a>
+            <div class="listen-buttons">
+
+            <a class="listen-btn" href="https://open.spotify.com/album/4ansrx3QKESzC05xHed808?si=qMu5vYxfS1uW0Ose5MVGFw" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.359-.66.48-1.021.24-2.82-1.74-6.36-2.101-10.561-1.141-.418.122-.779-.179-.899-.539-.12-.421.18-.78.54-.9 4.56-1.021 8.52-.6 11.64 1.32.42.18.479.659.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.021.6-1.141C9.6 9.9 15 10.561 18.72 12.84c.361.181.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.301c-.6.179-1.2-.181-1.38-.721-.18-.601.18-1.2.72-1.381 4.26-1.26 11.28-1.02 15.721 1.621.539.3.719 1.02.419 1.56-.299.421-1.02.599-1.559.3z"/></svg>
+            Listen on Spotify
+            </a>
+
+            <a class="listen-btn sc-btn" href="https://soundcloud.com/rob-power-music" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M1.175 12.225c-.015.132 0 .263.044.388l1.016 3.612-1.016 3.5a.74.74 0 0 1-.044.387.44.44 0 0 1-.394.238.44.44 0 0 1-.394-.238.74.74 0 0 1-.044-.387L.387 16.225.343 12.613a.74.74 0 0 1 .044-.388.44.44 0 0 1 .394-.238.44.44 0 0 1 .394.238zm2.137-1.05c-.02.175 0 .35.059.513l1.35 4.537-1.35 4.4a.98.98 0 0 1-.059.513.587.587 0 0 1-.525.319.587.587 0 0 1-.525-.319.98.98 0 0 1-.059-.513l-1.35-4.4 1.35-4.537a.98.98 0 0 1 .059-.513.587.587 0 0 1 .525-.319.587.587 0 0 1 .525.319zm2.35-.7c-.025.219 0 .438.075.644l1.688 5.156-1.688 5.044a1.225 1.225 0 0 1-.075.644.734.734 0 0 1-.656.4.734.734 0 0 1-.656-.4 1.225 1.225 0 0 1-.075-.644l-1.688-5.044 1.688-5.156a1.225 1.225 0 0 1 .075-.644.734.734 0 0 1 .656-.4.734.734 0 0 1 .656.4zm2.35-.35c-.031.263 0 .525.088.775l2.025 5.9-2.025 5.756a1.469 1.469 0 0 1-.088.775.881.881 0 0 1-.788.481.881.881 0 0 1-.788-.481 1.469 1.469 0 0 1-.088-.775l-2.025-5.756 2.025-5.9a1.469 1.469 0 0 1 .088-.775.881.881 0 0 1 .788-.481.881.881 0 0 1 .788.481zm9.8-3.5a6.3 6.3 0 0 0-2.1.363 8.4 8.4 0 0 0-8.4-1.05 1.05 1.05 0 0 0-.656.981v13.65a1.05 1.05 0 0 0 1.05 1.05h10.106a4.2 4.2 0 0 0 0-8.4 4.156 4.156 0 0 0-.656.056 6.3 6.3 0 0 0 .656-12.65z"/></svg>
+            Listen on SoundCloud
+             </a>
+
+            <a class="listen-btn apple-btn" href="https://music.apple.com/album/the-lost-mine-ep/1786867844" target="_blank" rel="noopener">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M23.994 6.124a9.23 9.23 0 0 0-.24-2.19c-.317-1.31-1.062-2.31-2.18-3.043a6.303 6.303 0 0 0-1.903-.737 9.577 9.577 0 0 0-1.804-.198c-.038-.001-.243-.01-.31-.012H5.5C4.51 0 3.555.204 2.65.61A5.994 5.994 0 0 0 .61 2.65 6.022 6.022 0 0 0 0 5.5v13c0 .99.204 1.945.61 2.85a5.994 5.994 0 0 0 2.04 2.04A5.98 5.98 0 0 0 5.5 24h13a5.98 5.98 0 0 0 2.85-.61 5.994 5.994 0 0 0 2.04-2.04A5.98 5.98 0 0 0 24 18.5v-13a9.23 9.23 0 0 0-.006-.376zM17.5 12.5v4a1 1 0 0 1-1 1h-1a1 1 0 0 1-1-1v-4H10v4a1 1 0 0 1-1 1H8a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v3h4.5V8a1 1 0 0 1 1-1h1a1 1 0 0 1 1 1v4.5z"/></svg>
+            Listen on Apple Music
+            </a>
+
+          </div>
         </div>
 
       </div>
@@ -599,58 +651,6 @@
     </footer>
 
   </div>
-
-  <script>
-    // ── Tab switcher ─────────────────────────────────────────────
-    document.querySelectorAll('.track-tab').forEach(tab => {
-      tab.addEventListener('click', () => {
-        const release = tab.dataset.release;
-        const idx     = parseInt(tab.dataset.track);
-        document.querySelectorAll(`.track-tab[data-release="${release}"]`)
-          .forEach(t => t.classList.remove('active'));
-        document.querySelectorAll(`#${release}-frames .sc-frame`)
-          .forEach(f => f.classList.remove('active'));
-        tab.classList.add('active');
-        document.querySelectorAll(`#${release}-frames .sc-frame`)[idx]
-          .classList.add('active');
-      });
-    });
-
-    // ── Hide placeholders once images load ───────────────────────
-
-    // Hero background
-    const heroImg = document.querySelector('.hero-img');
-    const heroPh  = document.getElementById('heroPh');
-    if (heroImg && heroImg.getAttribute('src') !== '#') {
-      heroImg.addEventListener('load',  () => { if (heroPh) heroPh.style.display = 'none'; });
-      heroImg.addEventListener('error', () => { if (heroPh) heroPh.style.display = 'flex'; });
-    }
-
-    // Artist icon — also mirrors src to footer icon
-    const artistIcon = document.getElementById('artistIcon');
-    const iconPh     = document.getElementById('iconPh');
-    const footerIcon = document.getElementById('footerIcon');
-    if (artistIcon && artistIcon.getAttribute('src') !== '#') {
-      // Mirror the same URL to the footer icon
-      footerIcon.src = artistIcon.src;
-      artistIcon.addEventListener('load', () => {
-        if (iconPh) iconPh.style.display = 'none';
-        artistIcon.style.opacity = '';
-      });
-      artistIcon.addEventListener('error', () => {
-        if (iconPh) iconPh.style.display = 'flex';
-      });
-    }
-
-    // EP cover art placeholders
-    document.querySelectorAll('.ep-art').forEach(art => {
-      const img = art.querySelector('img');
-      const ph  = art.querySelector('.ep-art-placeholder');
-      if (!img || !ph || img.getAttribute('src') === '#') return;
-      img.addEventListener('load',  () => ph.style.display = 'none');
-      img.addEventListener('error', () => ph.style.display = 'flex');
-    });
-  </script>
 
   <script>
   document.getElementById('year').textContent = new Date().getFullYear();
