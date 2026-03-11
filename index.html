@@ -440,14 +440,25 @@
 
     .listen-buttons {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: row;
   gap: 10px;
   margin-top: 22px;
 }
 
 .listen-buttons .listen-btn {
   margin-top: 0;
-  flex: 1 1 auto;
+  flex: 1;
+  justify-content: center;
+}
+
+@media (max-width: 520px) {
+  .listen-buttons {
+    flex-direction: column;
+  }
+  .listen-buttons .listen-btn {
+    width: 100%;
+    justify-content: center;
+  }
 }
 
 .listen-btn.sc-btn {
