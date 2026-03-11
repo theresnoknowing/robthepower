@@ -453,6 +453,42 @@
   transform: translateY(-2px);
 }
 
+  /* ── Icon sizing ── */
+.listen-btn img {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+  display: block;
+  object-fit: contain;
+}
+
+/* ── Spotify ── */
+.listen-btn.spotify-btn {
+  background: #1DB954;
+  color: #000;
+}
+.listen-btn.spotify-btn:hover {
+  box-shadow: 0 6px 20px rgba(29, 185, 84, 0.45);
+}
+
+/* ── SoundCloud ── */
+.listen-btn.sc-btn {
+  background: #ff5500;
+  color: #fff;
+}
+.listen-btn.sc-btn:hover {
+  box-shadow: 0 6px 20px rgba(255, 85, 0, 0.45);
+}
+
+/* ── Apple Music ── */
+.listen-btn.apple-btn {
+  background: linear-gradient(135deg, #fc3c44, #f94c57);
+  color: #fff;
+}
+.listen-btn.apple-btn:hover {
+  box-shadow: 0 6px 20px rgba(252, 60, 68, 0.45);
+}
+
 /* ── Mobile ── */
 @media (max-width: 520px) {
   .listen-buttons {
