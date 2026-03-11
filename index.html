@@ -10,10 +10,10 @@
   <meta property="og:type" content="website" />
 
   <!-- Favicon -->
-  <link rel="icon" type="image/png" href="https://i.imgur.com/26kvjD5.png" />
+  <link rel="icon" type="image/svg+xml" href="icon.svg" />
 
   <!-- Apple Touch Icon -->
-  <link rel="apple-touch-icon"      href="https://i.imgur.com/26kvjD5.png" />
+  <link rel="apple-touch-icon" href="icon.svg" />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -124,6 +124,7 @@
       z-index: 1;
       pointer-events: none;
     }
+    
     .hero-img-placeholder .ph-icon { font-size: 3rem; opacity: 0.2; }
     .hero-img-placeholder .ph-text {
       font-family: 'Space Mono', monospace;
@@ -156,34 +157,31 @@
       align-items: center;
     }
 
-    /* ── Artist icon ── */
-    .artist-icon {
-      width: 100px;
-      height: 100px;
-      margin-bottom: 28px;
-      object-fit: contain;
-      opacity: 0;
-      animation: fadeUp 0.8s 0s ease forwards;
-      /*filter: brightness(0) saturate(100%) invert(72%) sepia(40%) saturate(600%) hue-rotate(340deg) brightness(105%);*/
+    /* ── Artist / Site icon ── */
+
+    .site-icon {
+      width: 80px;
+      height: 80px;
+      margin: 0 auto 28px;
+      animation: iconPulse 3s ease-in-out infinite;
     }
-    /* Placeholder shown if icon Imgur URL not yet set */
-    .artist-icon-placeholder {
-      width: 72px;
-      height: 72px;
-      margin-bottom: 28px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px dashed rgba(232,164,90,0.2);
-      border-radius: 8px;
-      font-family: 'Space Mono', monospace;
-      font-size: 0.55rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--muted);
-      opacity: 0.5;
-      animation: fadeUp 0.8s 0s ease both;
-    }
+
+    .site-icon img {
+    width: 100%;
+    height: 100%;
+    display: block;
+  }
+
+    @keyframes iconPulse {
+    0%, 100% {
+    filter: drop-shadow(0 0 6px rgba(232, 164, 90, 0.3));
+    transform: scale(1);
+  }
+    50% {
+    filter: drop-shadow(0 0 18px rgba(232, 164, 90, 0.65));
+    transform: scale(1.04);
+  }
+}
 
     .artist-tag {
       display: inline-block;
@@ -559,8 +557,6 @@
       .ep-card { padding: 22px 18px; }
       .ep-meta { gap: 16px; }
       .ep-art { width: 70px; height: 70px; }
-      .artist-icon,
-      .artist-icon-placeholder { width: 56px; height: 56px; }
     }
   </style>
 </head>
@@ -607,15 +603,10 @@
 
     <div class="hero-content">
 
-      <!-- 2. ARTIST ICON — replace src="#" -->
-      <img
-        class="artist-icon"
-        id="artistIcon"
-        src="https://i.imgur.com/JETO5UD.png"
-        alt="Rob Power icon"
-      />
-      <!-- Shown only while icon src="#" — hidden by JS once image loads -->
-      <div class="artist-icon-placeholder" id="iconPh">Icon</div>
+      <!-- 2. SITE ICON — replace src="#" -->
+    <div class="site-icon">
+      <img src="icon.svg" alt="Rob Power" />
+    </div>
 
       <!--<div class="artist-tag">Downtempo &nbsp;·&nbsp; Electronic</div>-->
       <h1>rob power</h1>
