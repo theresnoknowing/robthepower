@@ -316,7 +316,7 @@
       border-radius: 20px;
       padding: 32px;
       position: relative;
-      overflow: hidden;
+      overflow: visible;
       transition: border-color 0.3s, box-shadow 0.3s;
     }
     .ep-card:hover {
@@ -329,6 +329,7 @@
       inset: 0;
       background: linear-gradient(135deg, rgba(232,164,90,0.04) 0%, transparent 60%);
       pointer-events: none;
+      overflow: hidden;
     }
 
     .ep-meta {
@@ -422,16 +423,18 @@
   gap: 10px;
   margin-top: 22px;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .listen-btn {
-  flex: 1;
+  flex: 1 1 0;
+  min-width: 0;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
   gap: 8px;
-  padding: 11px 16px;
+  padding: 11px 12px;
   background: #1DB954;
   color: #000;
   font-family: 'Space Grotesk', sans-serif;
@@ -442,6 +445,7 @@
   letter-spacing: 0.02em;
   white-space: nowrap;
   transition: transform 0.2s, box-shadow 0.2s;
+  box-sizing: border-box;
 }
 
 .listen-btn:hover {
