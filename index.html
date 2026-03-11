@@ -439,27 +439,30 @@
     .listen-btn svg { width: 16px; height: 16px; }
 
     .listen-buttons {
-  display: flex;
-  flex-direction: row;
-  gap: 10px;
-  margin-top: 22px;
-}
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    margin-top: 22px;
+    width: 100%
+    }
 
-.listen-buttons .listen-btn {
-  margin-top: 0;
-  flex: 1;
-  justify-content: center;
-  white-space: nowrap;
-}
+    .listen-buttons .listen-btn {
+    margin-top: 0;
+    flex: 1 1 0;
+    min-width: 0;
+    justify-content: center;
+    white-space: nowrap;
+    }
 
-@media (max-width: 520px) {
-  .listen-buttons {
+    @media (max-width: 520px) {
+    .listen-buttons {
     flex-direction: column;
-  }
-  .listen-buttons .listen-btn {
+    }
+    .listen-buttons .listen-btn {
     width: 100%;
     justify-content: center;
-  }
+    white-space: nowrap;
+    }
 }
 
 .listen-btn.sc-btn {
